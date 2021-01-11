@@ -184,4 +184,5 @@ void            virtio_disk_rw(struct buf *, int);
 void            virtio_disk_intr(void);
 
 // number of elements in fixed-size array
+// 固定大小数组中的元素个数
 #define NELEM(x) (sizeof(x)/sizeof((x)[0]))

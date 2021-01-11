@@ -23,12 +23,10 @@ char buf[BUFSZ];
 
 // what if you pass ridiculous pointers to system calls
 // that read user memory with copyin?
-void
-copyin(char *s)
-{
+void copyin(char *s) {
   uint64 addrs[] = { 0x80000000LL, 0xffffffffffffffff };
 
-  for(int ai = 0; ai < 2; ai++){
+  for (int ai = 0; ai < 2; ai++){
     uint64 addr = addrs[ai];
     
     int fd = open("copyin1", O_CREATE|O_WRONLY);
